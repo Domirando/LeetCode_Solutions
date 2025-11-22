@@ -9,4 +9,4 @@ let twoSum = function(numbers, target) {
 }
 };
 
-console.log(twoSum([2,7,11,15], 9))
+console.log("test: " + twoSum([2,7,11,15], 9))
