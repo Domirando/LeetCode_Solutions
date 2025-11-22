@@ -8,4 +8,5 @@ let twoSum = function(numbers, target) {
        indices.set(numbers[i], i);
 }
 };
+
 console.log(twoSum([2,7,11,15], 9))
