@@ -5,7 +5,7 @@ function binarySearch(searchTerms, guess) {
     while(min <= max){
         let times = 1
 
-        mid = Math.trunc((min+max)/2)
+        let mid = Math.trunc((min+max)/2)
         let res = searchTerms[mid]
         if (guess === res){
             console.log("times: " + times)
@@ -14,7 +14,7 @@ function binarySearch(searchTerms, guess) {
             times++
         }
 
-        if (guess < res) {
+        if (guess < res && mid !== 0) {
             max = mid - 1
         } else {
             min = mid + 1
