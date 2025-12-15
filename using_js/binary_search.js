@@ -3,6 +3,8 @@ function binarySearch(searchTerms, guess) {
     let min = 0
     let times = 0
 
+    let t = binarySearch([1, 3, 5, 7, 9, 11, 15], 15)
+
     while(min <= max){
         let mid = Math.trunc((min+max)/2)
         let res = searchTerms[mid]
@@ -21,7 +23,6 @@ function binarySearch(searchTerms, guess) {
     return undefined;
 }
 
-let t = binarySearch([1, 3, 5, 7, 9, 11, 15], 15)
 if (t !== undefined) {
     console.log("took O(log2 =", t, ") times")
 }else{
