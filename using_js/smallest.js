@@ -1,5 +1,4 @@
 function smallest_fn(arr){
-    let sorted = [];
     let min = 0;
     for(let i=1; i<=arr.length-1; i++){
         if (arr[min]>arr[i]){
