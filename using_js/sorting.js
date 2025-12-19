@@ -9,15 +9,12 @@ function smallest_fn(arr){
 }
 
 function sorting_fn(arr){
-    let len = arr.length
+    let len = arr.length-1
     let sorted = []
     let smallest = smallest_fn(arr)
     while (sorted.length != len){
         sorted.push(smallest)
-        arr = arr.filter( i => {
-            arr[i] != smallest
-            console.log(smallest+" "+arr[i])
-        })
+        arr = arr.filter( i => i != smallest)
         smallest = smallest_fn(arr)
     }
     return sorted
