@@ -5,7 +5,7 @@ function smallest_fn(arr){
             min = i
         }
     }
-    return arr[min]
+    return min
 }
 
 function sorting_fn(arr){
@@ -13,9 +13,14 @@ function sorting_fn(arr){
     let sorted = []
     let smallest = smallest_fn(arr)
     while (sorted.length != len){
-        sorted.push(smallest)
-        arr = arr.filter( i => i != smallest)
+        sorted.push(arr[smallest])
+        arr = arr.filter( item => item != arr[smallest])
         smallest = smallest_fn(arr)
+        arr.forEach((element, i) => {
+            if(element==arr[smallest] && i!=smallest){
+                sorted.push(element)
+            }
+        })
     }
     return sorted
 }
