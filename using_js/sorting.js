@@ -9,7 +9,7 @@ function smallest_fn(arr){
 }
 
 function sorting_fn(arr){
-    let len = arr.length-1
+    let len = arr.length
     let sorted = []
     let smallest = smallest_fn(arr)
     while (sorted.length != len){
@@ -25,4 +25,4 @@ function sorting_fn(arr){
     return sorted
 }
 
-console.log(sorting_fn([-1, -2, 1, 4, 8, 7, 3, 1, 2]))
+console.log(sorting_fn([-1, -2, -3, 1, 4, 8, 9, 7, 3, 9, 8, 1, 2]))
