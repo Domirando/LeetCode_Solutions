@@ -1,4 +1,4 @@
-fn smallest_fn(arr: &[i64]) -> usize{
+fn smallest_fn(arr: &Vec<i64>) -> usize{
     let mut min = 0;
     for i in 0..arr.len() {
         if arr[i]<arr[min]{
@@ -10,20 +10,17 @@ fn smallest_fn(arr: &[i64]) -> usize{
 
 fn sorting_fn(arr: &[i64]) -> Vec<i64>{
     let mut sorted = Vec::new();
-    let mut smallest = smallest_fn(arr);
-    while sorted.len() != arr.len() {
+    let mut arr = arr.to_vec();
+    let mut smallest = smallest_fn(&arr);
+    while !arr.is_empty() {
         sorted.push(arr[smallest]);
-        arr = arr.iter().filter(|&item| {
-            if item!=&arr[smallest]   {
-                return item
+        arr = arr.iter().filter(|&item| item != &arr[smallest]).cloned().collect();
+        smallest = smallest_fn(&arr);
+        for (index, item) in arr.iter().enumerate() {
+            if *item == arr[smallest] && index != smallest {
+                sorted.push(*item);
             }
-        }).cloned().collect();
-        smallest = smallest_fn(arr);
-        arr.into_iter().for_each(|(index, item)| {
-            if *item == &arr[smallest] && *index != smallest {
-                sorted.push(item);
-            }
-        });
+        }
     }
     sorted
 }
