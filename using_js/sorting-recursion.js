@@ -9,7 +9,7 @@ function smallest_fn(arr){
 }
 
 function sorting_fn(arr, sorted = []){
-    if (arr.length == 0) return sorted
+    if (!arr.length) return sorted
 
     let smallest = smallest_fn(arr)
     sorted.push(arr[smallest])
