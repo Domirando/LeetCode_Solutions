@@ -10,7 +10,7 @@ function smallest_fn(arr){
 
 function sorting_fn(arr){
     let sorted = [];
-    while(!arr.is_empty){
+    while(arr.length){
         let smallest = smallest_fn(arr)
         sorted.push(arr[smallest])
         arr = arr.filter(item => item!=arr[smallest])
