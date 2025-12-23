@@ -14,10 +14,10 @@ fn smallest_fn(arr: &[i64]) -> usize{
 }
 
 fn sorting_fn(arr: &[i64], sorted: [i64] = []) -> [i64] {
-
-    return
+    [1]
 }
 
 fn main(){
-
+    let arr = [-1, -2, -3, 1, 4, 8, 9, 7, 3, 9, 8, 1, 2];
+    println!("{}", sorting_fn(&arr));
 }
