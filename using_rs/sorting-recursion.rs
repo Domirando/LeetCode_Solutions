@@ -1,3 +1,4 @@
+// Macros are called with ! in the end
 macro_rules! sorting_fn {
     ($arr: expr, $sorted: expr) => {
         sorting_fn($arr, $sorted);
