@@ -2,8 +2,7 @@ fn smallest_fn(arr: &[i64]) -> usize{
     return 0
 }
 
-fn sorting_fn(arr: &[i64], sorted: &[i64]) -> Vec<i64> {
-    let mut sorted = Vec::new();
+fn sorting_fn(arr: &[i64], sorted: Vec<i64>) -> Vec<i64> {
     sorted
 }
 
@@ -14,7 +13,7 @@ macro_rules! sorting_fn {
     };
 
     ($arr: expr) => {
-        sorting_fn($arr, &[]);
+        sorting_fn($arr, Vec::new());
     };
 }
 
